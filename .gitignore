@@ -57,10 +57,6 @@ typings/
 .env.development
 .env.production
 
-# gatsby files
-.cache/
-public/
-
 # Mac files
 .DS_Store
 
@@ -79,3 +75,4 @@ archives/
 .dccache
 
 .next/
+out/
