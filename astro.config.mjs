@@ -6,9 +6,12 @@ import playformCompress from '@playform/compress';
 import mdx from '@astrojs/mdx';
 import sitemap from '@astrojs/sitemap';
 
+import react from '@astrojs/react';
+
 // https://astro.build/config
 export default defineConfig({
   site: 'https://arnaudflaesch.github.io',
+  //base: 'newblog',
   i18n: {
     defaultLocale: 'fr',
     locales: ['fr', 'en'],
@@ -33,6 +36,7 @@ export default defineConfig({
       Action: {
         Passed: async () => true // https://github.com/PlayForm/Compress/issues/376
       }
-    })
+    }),
+    react()
   ]
 });

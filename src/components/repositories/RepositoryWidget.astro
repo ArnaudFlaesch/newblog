@@ -1,0 +1,45 @@
+---
+import type { IEdge, IRepository } from '@/model/IRepository';
+import './RepositoryWidget.scss';
+import { useTranslations } from '@/i18n/utils';
+
+interface IProps {
+  lng: string;
+  description: string;
+  repoIcons?: React.JSX.Element[];
+  repositoryData: IRepository;
+}
+
+const { lng, description, repoIcons, repositoryData } = Astro.props;
+const t = useTranslations(lng);
+
+const ICON_HEIGHT = 40;
+const ICON_WIDTH = 40;
+
+function sortEdgesBySize(edgeA: IEdge, edgeB: IEdge) {
+  if (edgeA.size > edgeB.size) {
+    return -1;
+  }
+  if (edgeA.size < edgeB.size) {
+    return 1;
+  }
+  return 0;
+}
+---
+
+<div class="repository-widget-container">
+  <div class="repository-widget-title">
+    <h3>
+      <a href={repositoryData.url}>{repositoryData.name}</a>
+    </h3>
+    <div>
+      <a href={repositoryData.url}> </a>
+    </div>
+  </div>
+  <div>{t(description)}</div>
+  <div class="repository-icons-container">
+    <div>{t('TECHNICAL.STACK')} :</div>
+    <div class="repository-icons">{repoIcons}</div>
+    <div class="languages-container"></div>
+  </div>
+</div>

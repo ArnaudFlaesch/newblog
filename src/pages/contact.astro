@@ -1,0 +1,12 @@
+---
+import Layout from '@/layouts/Layout.astro';
+
+import { basics } from '@cv';
+import ContactForm from '@/components/ContactForm';
+
+const { name, label } = basics;
+---
+
+<Layout title={`${name}'s' Portfolio - ${label}`}>
+  <ContactForm />
+</Layout>

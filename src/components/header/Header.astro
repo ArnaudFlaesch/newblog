@@ -1,0 +1,80 @@
+---
+import './Header.scss';
+
+import { Icon } from 'astro-icon/components';
+import { getLangFromUrl, useTranslations } from '@/i18n/utils';
+import { type ui, type defaultLang } from '@/i18n/ui';
+import { Image } from 'astro:assets';
+import { getRelativeLocaleUrl } from 'astro:i18n';
+
+interface IUrl {
+  icon: any;
+  path: string;
+  label: keyof (typeof ui)[typeof defaultLang];
+}
+
+const urls: IUrl[] = [
+  {
+    path: '/',
+    label: 'HOME.LABEL',
+    icon: 'mdi:home'
+  },
+  {
+    path: '/cv/',
+    label: 'RESUME.LABEL',
+    icon: 'mdi:work'
+  },
+  {
+    path: '/blog/',
+    label: 'BLOG.LABEL',
+    icon: 'mdi:book'
+  },
+  {
+    path: '/projets/',
+    label: 'PROJECTS.LABEL',
+    icon: 'mdi:code'
+  },
+  {
+    path: '/contact/',
+    label: 'CONTACT.LABEL',
+    icon: 'mdi:email'
+  }
+];
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<span id="portfolio-header">
+  <h1>
+    <a href="/">props.siteTitle</a>
+  </h1>
+  <div id="right-navbar">
+    <ul id="url-list">
+      {
+        urls.map((url) => (
+          <li>
+            <a href={url.path}>
+              <Icon class="print:hidden" name={url.icon} width={20} height={20} />
+              {t(url.label)}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+
+    <div id="switch-language">
+      {
+        lang === 'fr' ? (
+          <a href={`/en/`}>
+            <Image src="/icons/languages/us-flag.png" height="30" width="30" alt={'en'} />
+          </a>
+        ) : (
+          <a href={getRelativeLocaleUrl('fr', 'contact')}>
+            <Image src="/icons/languages/french-flag.png" height="30" width="30" alt={'fr'} />
+          </a>
+        )
+      }
+    </div>
+  </div>
+</span>

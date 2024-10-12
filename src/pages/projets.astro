@@ -1,0 +1,61 @@
+---
+import RepositoryWidget from '@/components/repositories/RepositoryWidget.astro';
+import Layout from '@/layouts/Layout.astro';
+import type { IRepository } from '@/model/IRepository';
+import { basics } from '@cv';
+
+const { name, label } = basics;
+
+const projectsNames = ['Dash-Web', 'Dash-WebServices', 'CashManager', 'arnaudflaesch.github.io'];
+
+async function getProjectData(projectName: string): Promise<IRepository> {
+  return await fetch('https://api.github.com/graphql', {
+    method: 'POST',
+    headers: { Authorization: `Bearer ${import.meta.env.PORTFOLIO_GITHUB_TOKEN}` },
+    body: JSON.stringify({
+      query: `
+        query GetGitHubRepositoryDataQuery($repository: String!) {
+            repository(name: $repository, owner: "ArnaudFlaesch") {
+            name
+            url
+            languages(first: 5) {
+                edges {
+                node {
+                    name
+                    color
+                }
+                size
+                }
+                totalSize
+            }
+            }
+        }
+        `,
+      variables: {
+        repository: projectName
+      }
+    })
+  })
+    .then((response) => response.json())
+    .then((json) => json.data.repository as IRepository);
+}
+const projectsData = await Promise.all(projectsNames.map(getProjectData));
+
+/*
+const portfolioIcons = [<ReactJSIcon />,
+                <SassIcon />,
+                <GatsbyIcon />,
+                <TypeScriptIcon />,
+                <GithubActionsIcon />,
+                <GraphQLIcon />];*/
+---
+
+<Layout title={`${name}'s' Portfolio - ${label}`}>
+  <div id="projects-list">
+    {
+      projectsData.map((projectData) => (
+        <RepositoryWidget lng={'fr'} description={'description'} repositoryData={projectData} />
+      ))
+    }
+  </div>
+</Layout>

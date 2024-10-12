@@ -4,9 +4,9 @@
   "basics": {
     "name": "MiraHikari",
     "label": "Senior Full Stack Developer",
-    "image": "/avatar.png",
+    "image": "/profile-picture.jpg",
     "email": "mirahikari@gcxstudio.cn",
-    "url": "https://www.gcxstudio.cn",
+    "url": "https://arnaudflaesch.github.io",
     "summary": "Born in 2010, I primarily work with TypeScript and JavaScript for full-stack development, and enjoy working with various technologies.",
     "theme": "red",
     "location": {
@@ -99,15 +99,9 @@
       "startDate": "2022-06-01",
       "endDate": null,
       "summary": "Developing high-availability full-stack projects.",
-      "highlights": [
-        "Enhanced internal workflow efficiency by 30%."
-      ],
-      "responsibilities": [
-        "Developed and maintained backend services using Node.js and Golang."
-      ],
-      "achievements": [
-        "Implemented a cloud drive and verification code system."
-      ],
+      "highlights": ["Enhanced internal workflow efficiency by 30%."],
+      "responsibilities": ["Developed and maintained backend services using Node.js and Golang."],
+      "achievements": ["Implemented a cloud drive and verification code system."],
       "skills": {
         "PHP": "simple-icons:php",
         "Node": "ri:nodejs-line",
@@ -130,16 +124,9 @@
       "startDate": "2023-01-01",
       "endDate": "2024-02-11",
       "summary": "Led page design and account systems.",
-      "highlights": [
-        "Completed 95% of project content."
-      ],
-      "responsibilities": [
-        "Developed complete pages.",
-        "Integrated user-facing elements with server-side logic."
-      ],
-      "achievements": [
-        "Ensured smooth project execution."
-      ],
+      "highlights": ["Completed 95% of project content."],
+      "responsibilities": ["Developed complete pages.", "Integrated user-facing elements with server-side logic."],
+      "achievements": ["Ensured smooth project execution."],
       "skills": {
         "HTML": "simple-icons:html5",
         "CSS": "ri:css3-fill",
@@ -163,311 +150,187 @@
       "name": "HTML",
       "icon": "simple-icons:html5",
       "level": "Intermediate",
-      "keywords": [
-        "Web Development",
-        "Frontend"
-      ]
+      "keywords": ["Web Development", "Frontend"]
     },
     {
       "name": "CSS",
       "icon": "ri:css3-fill",
       "level": "Intermediate",
-      "keywords": [
-        "Web Development",
-        "Frontend",
-        "Responsive Design"
-      ]
+      "keywords": ["Web Development", "Frontend", "Responsive Design"]
     },
     {
       "name": "JavaScript",
       "icon": "simple-icons:javascript",
       "level": "Expert",
-      "keywords": [
-        "Web Development",
-        "Frontend",
-        "Backend",
-        "Fullstack"
-      ]
+      "keywords": ["Web Development", "Frontend", "Backend", "Fullstack"]
     },
     {
       "name": "Tailwind",
       "icon": "mdi:tailwind",
       "level": "Intermediate",
-      "keywords": [
-        "Web Development",
-        "Frontend",
-        "CSS Framework",
-        "Responsive Design"
-      ]
+      "keywords": ["Web Development", "Frontend", "CSS Framework", "Responsive Design"]
     },
     {
       "name": "TypeScript",
       "icon": "simple-icons:typescript",
       "level": "Expert",
-      "keywords": [
-        "Web Development",
-        "Frontend",
-        "Backend",
-        "JavaScript Superset"
-      ]
+      "keywords": ["Web Development", "Frontend", "Backend", "JavaScript Superset"]
     },
     {
       "name": "Node",
       "icon": "ri:nodejs-line",
       "level": "Intermediate",
-      "keywords": [
-        "Web Development",
-        "Backend",
-        "JavaScript",
-        "Server"
-      ]
+      "keywords": ["Web Development", "Backend", "JavaScript", "Server"]
     },
     {
       "name": "SQL",
       "icon": "simple-icons:mysql",
       "level": "Intermediate",
-      "keywords": [
-        "Databases",
-        "SQL",
-        "Data Storage",
-        "Backend"
-      ]
+      "keywords": ["Databases", "SQL", "Data Storage", "Backend"]
     },
     {
       "name": "MongoDB",
       "icon": "simple-icons:mongodb",
       "level": "Intermediate",
-      "keywords": [
-        "Databases",
-        "File",
-        "Data Storage",
-        "Backend"
-      ]
+      "keywords": ["Databases", "File", "Data Storage", "Backend"]
     },
     {
       "name": "Git",
       "icon": "mdi:git",
       "level": "Intermediate",
-      "keywords": [
-        "Version Control",
-        "Collaboration",
-        "Source Code"
-      ]
+      "keywords": ["Version Control", "Collaboration", "Source Code"]
     },
     {
       "name": "GitHub",
       "icon": "mdi:github",
       "level": "Expert",
-      "keywords": [
-        "Version Control",
-        "Collaboration",
-        "Source Code",
-        "Git"
-      ]
+      "keywords": ["Version Control", "Collaboration", "Source Code", "Git"]
     },
     {
       "name": "Next.js",
       "icon": "ri:nextjs-line",
       "level": "Intermediate",
-      "keywords": [
-        "Web Development",
-        "Frontend",
-        "React Framework",
-        "SSR",
-        "Static Generation"
-      ]
+      "keywords": ["Web Development", "Frontend", "React Framework", "SSR", "Static Generation"]
     },
     {
       "name": "React",
       "icon": "mdi:react",
       "level": "Expert",
-      "keywords": [
-        "Web Development",
-        "Frontend",
-        "JavaScript Library",
-        "UI"
-      ]
+      "keywords": ["Web Development", "Frontend", "JavaScript Library", "UI"]
     },
     {
       "name": "Vue",
       "icon": "mdi:vuejs",
       "level": "Intermediate",
-      "keywords": [
-        "Web Development",
-        "Frontend",
-        "JavaScript Library",
-        "UI"
-      ]
+      "keywords": ["Web Development", "Frontend", "JavaScript Library", "UI"]
     },
     {
       "name": "Docker",
       "icon": "mdi:docker",
       "level": "Intermediate",
-      "keywords": [
-        "Virtual Environments",
-        "Backend"
-      ]
+      "keywords": ["Virtual Environments", "Backend"]
     },
     {
       "name": "NestJS",
       "icon": "simple-icons:nestjs",
       "level": "Intermediate",
-      "keywords": [
-        "Web Development",
-        "Backend",
-        "IOC"
-      ]
+      "keywords": ["Web Development", "Backend", "IOC"]
     },
     {
       "name": "Vite",
       "icon": "simple-icons:vite",
       "level": "Intermediate",
-      "keywords": [
-        "Web Development",
-        "Frontend",
-        "Build Tool"
-      ]
+      "keywords": ["Web Development", "Frontend", "Build Tool"]
     },
     {
       "name": "WordPress",
       "icon": "ri:wordpress-fill",
       "level": "Intermediate",
-      "keywords": [
-        "PHP",
-        "Fullstack",
-        "Frontend"
-      ]
+      "keywords": ["PHP", "Fullstack", "Frontend"]
     },
     {
       "name": "Golang",
       "icon": "simple-icons:go",
       "level": "Beginner",
-      "keywords": [
-        "Backend",
-        "Cloud Service"
-      ]
+      "keywords": ["Backend", "Cloud Service"]
     },
     {
       "name": "Astro",
       "icon": "simple-icons:astro",
       "level": "Intermediate",
-      "keywords": [
-        "Web Development",
-        "Frontend",
-        "SSR",
-        "Static Generation"
-      ]
+      "keywords": ["Web Development", "Frontend", "SSR", "Static Generation"]
     },
     {
       "name": "PHP",
       "icon": "simple-icons:php",
       "level": "Intermediate",
-      "keywords": [
-        "Web Development",
-        "Backend",
-        "Fullstack"
-      ]
+      "keywords": ["Web Development", "Backend", "Fullstack"]
     },
     {
       "name": "Nginx",
       "icon": "simple-icons:nginx",
       "level": "Intermediate",
-      "keywords": [
-        "Web Development",
-        "Backend",
-        "Web Server"
-      ]
+      "keywords": ["Web Development", "Backend", "Web Server"]
     },
     {
       "name": "Tauri",
       "icon": "simple-icons:tauri",
       "level": "Beginner",
-      "keywords": [
-        "Desktop App",
-        "Rust",
-        "Webview"
-      ]
+      "keywords": ["Desktop App", "Rust", "Webview"]
     },
     {
       "name": "Rust",
       "icon": "simple-icons:rust",
       "level": "Beginner",
-      "keywords": [
-        "Desktop App",
-        "Webview"
-      ]
+      "keywords": ["Desktop App", "Webview"]
     },
     {
       "name": "Socket.IO",
       "icon": "simple-icons:socketdotio",
       "level": "Beginner",
-      "keywords": [
-        "Realtime",
-        "Websocket"
-      ]
+      "keywords": ["Realtime", "Websocket"]
     },
     {
       "name": "Electron",
       "icon": "simple-icons:electron",
       "level": "Beginner",
-      "keywords": [
-        "Desktop App",
-        "Webview"
-      ]
+      "keywords": ["Desktop App", "Webview"]
     },
     {
       "name": "Shell",
       "icon": "simple-icons:shell",
       "level": "Intermediate",
-      "keywords": [
-        "Scripting",
-        "Automation"
-      ]
+      "keywords": ["Scripting", "Automation"]
     },
     {
       "name": "Linux",
       "icon": "simple-icons:linux",
       "level": "Intermediate",
-      "keywords": [
-        "OS",
-        "Scripting",
-        "Automation"
-      ]
+      "keywords": ["OS", "Scripting", "Automation"]
     },
     {
       "name": "Vercel",
       "icon": "simple-icons:vercel",
       "level": "Intermediate",
-      "keywords": [
-        "Serverless",
-        "Static Site Hosting"
-      ]
+      "keywords": ["Serverless", "Static Site Hosting"]
     },
     {
       "name": "Netlify",
       "icon": "simple-icons:netlify",
       "level": "Intermediate",
-      "keywords": [
-        "Serverless",
-        "Static Site Hosting"
-      ]
+      "keywords": ["Serverless", "Static Site Hosting"]
     },
     {
       "name": "Tencent Cloud",
       "icon": "simple-icons:tencentqq",
       "level": "Intermediate",
-      "keywords": [
-        "Cloud Service"
-      ]
+      "keywords": ["Cloud Service"]
     },
     {
       "name": "Cloudflare Edge Functions",
       "icon": "simple-icons:cloudflare",
       "level": "Expert",
-      "keywords": [
-        "Serverless",
-        "Edge Computing"
-      ]
+      "keywords": ["Serverless", "Edge Computing"]
     }
   ],
   "languages": [
@@ -483,10 +346,7 @@
   "interests": [
     {
       "name": "Technology",
-      "keywords": [
-        "AI",
-        "Blockchain"
-      ]
+      "keywords": ["AI", "Blockchain"]
     }
   ],
   "references": [
