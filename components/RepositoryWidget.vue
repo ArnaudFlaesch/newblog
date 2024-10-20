@@ -19,7 +19,22 @@
 
     <div class="repository-icons-container">
       <div>{{ $t('TECHNICAL.STACK') }} :</div>
-      <div class="repository-icons">{{ 'repoWidgetProps.repoIcons' }}</div>
+
+      <div class="repository-icons">
+        <TooltipIcon
+          v-bind:key="index"
+          v-for="(languageIcon, index) in repoWidgetProps.repoIcons"
+          :tooltip="languageIcon.name"
+        >
+          <template v-slot:icon
+            ><NuxtImg
+              :src="`${ICONS_PATH}${languageIcon.label.toLowerCase()}/${languageIcon.path ? languageIcon.path : languageIcon.name.replace(/\s/g, '').toLowerCase()}.${languageIcon.extension ? languageIcon.extension : 'svg'}`"
+              :width="MAX_WIDTH"
+              :height="MAX_HEIGHT"
+              :alt="languageIcon.name"
+          /></template>
+        </TooltipIcon>
+      </div>
 
       <div class="languages-container">
         <div
@@ -39,12 +54,21 @@
 </template>
 
 <script lang="ts" setup>
+import type { IGitHubRepoLanguage } from '~/model/IGitHubRepoLanguage';
 import type { IEdge, IRepository } from '~/model/IRepository';
 const ICON_HEIGHT = 40;
 const ICON_WIDTH = 40;
+const MAX_HEIGHT = 40;
+const MAX_WIDTH = 40;
+
+const ICONS_PATH = '/icons/';
 const repoWidgetProps = defineProps({
   description: {
     type: String,
+    required: true
+  },
+  repoIcons: {
+    type: Array<IGitHubRepoLanguage>,
     required: true
   },
   repositoryData: {

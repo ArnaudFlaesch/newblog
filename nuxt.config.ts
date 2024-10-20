@@ -41,6 +41,12 @@ export default defineNuxtConfig({
     defaultLocale: 'fr',
     strategy: 'prefix_except_default'
   },
+  nitro: {
+    prerender: {
+      crawlLinks: true,
+      failOnError: false
+    }
+  },
   vite: {
     vue: {
       template: {
