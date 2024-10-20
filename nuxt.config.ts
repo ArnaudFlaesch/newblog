@@ -12,6 +12,7 @@ export default defineNuxtConfig({
   modules: [
     '@nuxt/image',
     '@nuxtjs/i18n',
+    '@nuxt/ui',
     '@nuxt/content',
     'nuxt-graphql-client',
     (_options, nuxt) => {

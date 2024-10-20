@@ -1,9 +1,7 @@
 <template>
   <div id="profile">
     <NuxtLink to="/">
-      <!--<Avatar id="bio-avatar" alt={author} sx={{ width: 100, height: 100 }}>
-          <NuxtImg src="/profile-picture.jpg" width="100" height="100" alt="" />
-        </Avatar>-->
+      <UAvatar id="bio-avatar" size="3xl" src="profile-picture.jpg" :alt="author" />
     </NuxtLink>
     <div id="bio">
       <div id="work">

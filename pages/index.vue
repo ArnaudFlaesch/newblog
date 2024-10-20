@@ -23,21 +23,27 @@
       <h2 id="blog-title">
         <a href="/blog">{{ $t('RECENT.ARTICLES') }}</a>
       </h2>
-      <!-- <ol>
-          {posts.map((post: IPost) => (
-            <li key={post.fields.slug}>
-              <Post {...post} />
-            </li>
-          ))}
-        </ol>-->
+
+      <ContentList :query="query" v-slot="{ list }">
+        <ol>
+          <li v-for="article in list" :key="article._path">
+            <Post :post="article" />
+          </li>
+        </ol>
+      </ContentList>
     </div>
   </NuxtLayout>
 </template>
 
 <script lang="ts" setup>
+import type { QueryBuilderParams } from '@nuxt/content/dist/runtime/types';
+import Post from '~/components/Post.vue';
+
 const localePath = useLocalePath();
 const titleCode = 'INDEX.PAGE.TITLE';
 const descriptionCode = 'INDEX.PAGE.DESCRIPTION';
+
+const query: QueryBuilderParams = { path: '/blog', limit: 5, sort: [{ date: -1 }] };
 </script>
 
 <style lang="scss" scoped>
