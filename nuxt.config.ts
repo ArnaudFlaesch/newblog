@@ -1,5 +1,5 @@
 import vuetify, { transformAssetUrls } from 'vite-plugin-vuetify';
-
+const sw = process.env.SW === 'true';
 // https://nuxt.com/docs/api/configuration/nuxt-config
 
 export default defineNuxtConfig({
@@ -48,14 +48,27 @@ export default defineNuxtConfig({
       failOnError: false
     }
   },
+
   pwa: {
-    name: 'Arnaud Flaesch',
-    short_name: 'AF',
-    start_url: '/',
-    background_color: '#fafafa',
-    theme_color: '#1976d2',
-    display: 'minimal-ui',
-    icon: '/public/images/favicon.png'
+    strategies: sw ? 'injectManifest' : 'generateSW',
+    srcDir: sw ? 'service-worker' : undefined,
+    filename: sw ? 'sw.ts' : undefined,
+    registerType: 'autoUpdate',
+    manifest: {
+      name: 'Arnaud Flaesch',
+      short_name: 'AF',
+      background_color: '#fafafa',
+      theme_color: '#1976d2',
+      start_url: '/',
+      display: 'minimal-ui',
+      icon: '/public/images/favicon.png'
+    },
+    workbox: {
+      globPatterns: ['**/*.{js,css,html,png,svg,ico}']
+    },
+    injectManifest: {
+      globPatterns: ['**/*.{js,css,html,png,svg,ico}']
+    }
   },
   vite: {
     vue: {
