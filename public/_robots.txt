@@ -1,4 +1,2 @@
 User-agent: *
 Allow: /
-Sitemap: https://arnaudflaesch.github.io/sitemap-index.xml
-Host: https://arnaudflaesch.github.io
