@@ -2,9 +2,6 @@ import globals from 'globals';
 import eslint from '@eslint/js';
 import tseslint from 'typescript-eslint';
 import pluginCypress from 'eslint-plugin-cypress/flat';
-import eslintConfigPrettier from 'eslint-config-prettier';
-import markdown from '@eslint/markdown';
-import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended';
 
 export default [
   { files: ['**/*.{js,mjs,cjs,ts,jsx,tsx}'] },
@@ -12,10 +9,17 @@ export default [
   eslint.configs.recommended,
   ...tseslint.configs.recommended,
   pluginCypress.configs.recommended,
-  eslintConfigPrettier,
-  eslintPluginPrettierRecommended,
-  ...markdown.configs.recommended,
   {
-    ignores: ['**/node_modules/**']
+    ignores: [
+      'cypress/**',
+      'cypress.config.ts',
+      'cypress-test.config.ts',
+      'nuxt.config.ts',
+      'node_modules',
+      'dist',
+      'build',
+      'coverage',
+      'package-lock.json'
+    ]
   }
 ];
