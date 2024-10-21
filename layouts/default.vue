@@ -38,7 +38,7 @@ const { titleCode, descriptionCode }: { titleCode: string; descriptionCode: stri
 </script>
 
 <style lang="scss" scoped>
-@use '../styles/colors.scss';
+@use '../styles/colors';
 
 #site-container {
   height: 100%;
