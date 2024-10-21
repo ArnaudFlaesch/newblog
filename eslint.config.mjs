@@ -17,6 +17,8 @@ export default [
       'nuxt.config.ts',
       'node_modules',
       'dist',
+      '.nuxt',
+      '.output',
       'build',
       'coverage',
       'package-lock.json'

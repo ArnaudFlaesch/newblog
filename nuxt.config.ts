@@ -15,6 +15,7 @@ export default defineNuxtConfig({
     '@nuxt/ui',
     '@nuxt/content',
     'nuxt-graphql-client',
+    '@vite-pwa/nuxt',
     (_options, nuxt) => {
       nuxt.hooks.hook('vite:extendConfig', (config) => {
         // @ts-expect-error
@@ -46,6 +47,15 @@ export default defineNuxtConfig({
       crawlLinks: true,
       failOnError: false
     }
+  },
+  pwa: {
+    name: 'Arnaud Flaesch',
+    short_name: 'AF',
+    start_url: '/',
+    background_color: '#fafafa',
+    theme_color: '#1976d2',
+    display: 'minimal-ui',
+    icon: '/public/images/favicon.png'
   },
   vite: {
     vue: {
