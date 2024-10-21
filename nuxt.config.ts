@@ -1,11 +1,9 @@
 import vuetify, { transformAssetUrls } from 'vite-plugin-vuetify';
-const sw = process.env.SW === 'true';
 // https://nuxt.com/docs/api/configuration/nuxt-config
 
 export default defineNuxtConfig({
   compatibilityDate: '2024-04-03',
   devtools: { enabled: false },
-  head:
   css: ['~/assets/styles.scss', '~/assets/global.scss'],
   build: {
     transpile: ['vuetify']
@@ -54,28 +52,28 @@ export default defineNuxtConfig({
     // https://pwa.nuxtjs.org/manifest
     // Manifest adds Web App Manifest with no pain.
     manifest: {
-      name: "SportsWire",
-      short_name: "SportsWire",
-      description: "Up-to-date Sports News and Analysis App.",
-      theme_color: "#6a5acd",
-      lang: "en",
-      background_color: "#6a5acd",
+      name: 'SportsWire',
+      short_name: 'SportsWire',
+      description: 'Up-to-date Sports News and Analysis App.',
+      theme_color: '#6a5acd',
+      lang: 'en',
+      background_color: '#6a5acd'
     },
     // https://pwa.nuxtjs.org/icon
     icon: {
-      sizes: [64, 120, 144, 152, 192, 384, 512], //Array of sizes to be generated (Square).These are the default values
+      sizes: [64, 120, 144, 152, 192, 384, 512] //Array of sizes to be generated (Square).These are the default values
     },
     // https://pwa.nuxtjs.org/meta
     // Meta easily adds common meta tags into your project with zero-config needed.
     meta: {
-      name: "SportsWire",
-      description: "Up-to-date Sports News and Analysis App.",
-      author: "Vino Samari",
-      theme_color: "#6a5acd",
+      name: 'SportsWire',
+      description: 'Up-to-date Sports News and Analysis App.',
+      author: 'Vino Samari',
+      theme_color: '#6a5acd',
       nativeUi: true,
-      appleStatusBarStyle: "black",
-      mobileAppIOS: true,
-    },
+      appleStatusBarStyle: 'black',
+      mobileAppIOS: true
+    }
   },
   vite: {
     vue: {
