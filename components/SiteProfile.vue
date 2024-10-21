@@ -102,7 +102,6 @@ const IMAGE_HEIGHT = 40;
 const IMAGE_WIDTH = 40;
 
 const fullName = 'Arnaud Flaesch';
-const pwaShortName = 'AF';
 const city = 'Paris';
 const jobName = "Développeur d'applications";
 const company = 'Institut Pasteur';

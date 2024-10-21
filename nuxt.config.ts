@@ -1,32 +1,40 @@
 import vuetify, { transformAssetUrls } from 'vite-plugin-vuetify';
 // https://nuxt.com/docs/api/configuration/nuxt-config
 
+const fullName = 'Arnaud Flaesch';
+const city = 'Paris';
+const jobName = "Développeur d'applications";
+const company = 'Institut Pasteur';
+const title = `${fullName} - ${jobName}`;
+const siteName = 'arnaudflaesch.github.io';
+const siteUrl = `https://${siteName}`;
+const defaultImageUrl = '/profile-picture.jpg';
+
+const linkedinLink = 'https://www.linkedin.com/in/arnaudflaesch/';
+const githubLink = 'https://github.com/ArnaudFlaesch';
+const scrumOrgLink = 'https://www.scrum.org/user/1355891';
+const credlyLink = 'https://www.credly.com/users/arnaud-flaesch/badges';
+const mediumLink = 'https://medium.com/@arnaudflaesch';
+const stackOverflowLink = 'https://stackoverflow.com/users/12927815/arnaud-flaesch';
+
 export default defineNuxtConfig({
   compatibilityDate: '2024-04-03',
   devtools: { enabled: false },
   css: ['~/assets/styles.scss', '~/assets/global.scss'],
-
+  site: {
+    url: siteUrl,
+    name: title
+  },
   app: {
     head: {
       title: 'SportsWire - Up-to-date Sports News and Analysis App',
-      meta: [
-        { charset: 'utf-8' },
-        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-        {
-          hid: 'description',
-          name: 'description',
-          content:
-            'Stay up-to-date with the latest sports news and analysis anytime, anywhere with Sportswire - a fun and engaging web app built with Nuxt.js.'
-        },
-        { name: 'format-detection', content: 'telephone=no' }
-      ],
+      meta: [{ charset: 'utf-8' }, { name: 'viewport', content: 'width=device-width, initial-scale=1' }],
       link: [
         { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
         { rel: 'manifest', href: '/manifest.webmanifest' }
       ]
     }
   },
-
   build: {
     transpile: ['vuetify']
   },
@@ -36,7 +44,7 @@ export default defineNuxtConfig({
     '@nuxt/ui',
     '@nuxt/content',
     'nuxt-graphql-client',
-    '@vite-pwa/nuxt',
+    '@nuxtjs/seo',
     (_options, nuxt) => {
       nuxt.hooks.hook('vite:extendConfig', (config) => {
         // @ts-expect-error
@@ -66,7 +74,8 @@ export default defineNuxtConfig({
   nitro: {
     prerender: {
       crawlLinks: true,
-      failOnError: false
+      failOnError: false,
+      routes: ['/sitemap.xml']
     }
   },
   vite: {
