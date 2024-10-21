@@ -10,7 +10,7 @@ const descriptionCode = 'CONTACT.PAGE.DESCRIPTION';
 </script>
 
 <style lang="scss" scoped>
-@import '../styles/colors.scss';
+@use '../styles/colors.scss';
 
 #contact-form {
   display: flex;

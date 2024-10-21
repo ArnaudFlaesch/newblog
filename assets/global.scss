@@ -1,12 +1,12 @@
 /* CSS Custom Properties Definitions */
 
 /*
-@import '@fontsource/roboto/300.css';
-@import '@fontsource/roboto/400.css';
-@import '@fontsource/roboto/500.css';
-@import '@fontsource/roboto/700.css'; */
+@use '@fontsource/roboto/300.css';
+@use '@fontsource/roboto/400.css';
+@use '@fontsource/roboto/500.css';
+@use '@fontsource/roboto/700.css'; */
 
-@import '../styles/colors';
+@use '../styles/colors';
 
 /* stylelint-disable */
 html {

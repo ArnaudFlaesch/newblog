@@ -6,7 +6,7 @@
 </template>
 
 <style lang="scss" scoped>
-@import '../styles/colors';
+@use '../styles/colors';
 
 .detail-block {
   display: flex;

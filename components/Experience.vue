@@ -64,7 +64,7 @@ function displayPeriod(dateDebut: Date, dateFin?: Date) {
 </script>
 
 <style lang="scss" scoped>
-@import '../styles/colors';
+@use '../styles/colors';
 
 .job-content {
   display: flex;

@@ -63,7 +63,7 @@ const { locale, setLocale } = useI18n();
 </script>
 
 <style lang="scss" scoped>
-@import '../styles/colors';
+@use '../styles/colors';
 
 #portfolio-header {
   height: 100%;
