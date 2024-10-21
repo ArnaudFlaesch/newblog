@@ -5,6 +5,28 @@ export default defineNuxtConfig({
   compatibilityDate: '2024-04-03',
   devtools: { enabled: false },
   css: ['~/assets/styles.scss', '~/assets/global.scss'],
+
+  app: {
+    head: {
+      title: 'SportsWire - Up-to-date Sports News and Analysis App',
+      meta: [
+        { charset: 'utf-8' },
+        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+        {
+          hid: 'description',
+          name: 'description',
+          content:
+            'Stay up-to-date with the latest sports news and analysis anytime, anywhere with Sportswire - a fun and engaging web app built with Nuxt.js.'
+        },
+        { name: 'format-detection', content: 'telephone=no' }
+      ],
+      link: [
+        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+        { rel: 'manifest', href: '/manifest.webmanifest' }
+      ]
+    }
+  },
+
   build: {
     transpile: ['vuetify']
   },
@@ -45,34 +67,6 @@ export default defineNuxtConfig({
     prerender: {
       crawlLinks: true,
       failOnError: false
-    }
-  },
-
-  pwa: {
-    // https://pwa.nuxtjs.org/manifest
-    // Manifest adds Web App Manifest with no pain.
-    manifest: {
-      name: 'SportsWire',
-      short_name: 'SportsWire',
-      description: 'Up-to-date Sports News and Analysis App.',
-      theme_color: '#6a5acd',
-      lang: 'en',
-      background_color: '#6a5acd'
-    },
-    // https://pwa.nuxtjs.org/icon
-    icon: {
-      sizes: [64, 120, 144, 152, 192, 384, 512] //Array of sizes to be generated (Square).These are the default values
-    },
-    // https://pwa.nuxtjs.org/meta
-    // Meta easily adds common meta tags into your project with zero-config needed.
-    meta: {
-      name: 'SportsWire',
-      description: 'Up-to-date Sports News and Analysis App.',
-      author: 'Vino Samari',
-      theme_color: '#6a5acd',
-      nativeUi: true,
-      appleStatusBarStyle: 'black',
-      mobileAppIOS: true
     }
   },
   vite: {
