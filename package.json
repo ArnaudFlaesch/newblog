@@ -12,9 +12,9 @@
   "type": "module",
   "scripts": {
     "dev": "nuxt dev -o",
-    "build": "nuxt build",
+    "build": "SW=true nuxt build",
     "clean": "nuxi cleanup",
-    "generate": "nuxt generate",
+    "generate": "SW=true nuxt generate",
     "preview": "nuxt preview",
     "lint:md": "markdownlint **/*.md",
     "lint:md:fix": "npm run lint:md -- --fix",
