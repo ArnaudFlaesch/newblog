@@ -39,7 +39,7 @@ et d'avertir les développeurs quand une faille de sécurité est détectée.
 Dans l'onglet "Sécurité" d'un dépôt, vous pouvez cliquer sur "Dependabot" et ainsi trouver
 la liste des alertes qui requièrent votre attention.
 
-![Un exemple d'alertes remontée par Dependabot sur un de mes projets personnels.](/articles/2024/2-ghas/dependabot.png)
+![Un exemple d'alertes remontée par Dependabot sur un de mes projets personnels.](/blog/2024/2-ghas/dependabot.png)
 _Un exemple d'alertes remontées par Dependabot sur un de mes projets personnels._
 
 Un point important à prendre en compte et que les dépendances affectées par une faille de sécurité ne sont pas toutes
@@ -95,7 +95,7 @@ est un sujet qui doit être traité immédiatement pour limiter les risques.
 
 GitHub propose la fonctionnalité _secret scanning_ qui permet donc de détecter les secrets présents dans un dépôt.
 
-![L'écran de détection des secrets dans un de mes projets sur GitHub.](/articles/2024/2-ghas/secret_scanning.png)
+![L'écran de détection des secrets dans un de mes projets sur GitHub.](/blog/2024/2-ghas/secret_scanning.png)
 _L'écran de détection des secrets dans un de mes [projets](https://github.com/ArnaudFlaesch/arnaudflaesch.github.io/security/secret-scanning) sur GitHub._
 
 La fonctionnalité doit tout d'abord être activée via les paramètres du dépôt GitHub en allant dans le menu
@@ -124,7 +124,7 @@ Pour ajouter un scan CodeQL à un de vos projets, il suffit d'aller dans l'ongle
 sur "New workflow", de chercher "CodeQL" et de configurer l'action "CodeQL Analysis." Cela vous guidera
 dans la création d'un nouveau workflow et il ne restera qu'à choisir le ou les langages à analyser.
 
-![Exemple d'alertes remontées (entre autres) par CodeQL sur un de mes projets GitHub.](/articles/2024/2-ghas/code_scanning.png)
+![Exemple d'alertes remontées (entre autres) par CodeQL sur un de mes projets GitHub.](/blog/2024/2-ghas/code_scanning.png)
 _Exemple d'alertes remontées (entre autres) par CodeQL sur un de mes projets GitHub._
 
 Comme vous pouvez le voir sur l'image juste dessus, il y a des alertes remontées par CodeQL, mais aussi par
@@ -169,7 +169,7 @@ L'analyse va dans un premier temps s'exécuter sur tous les commits existant dé
 afficher les secrets détectés dans l'onglet "Secrets" via Repos > Advanced Security.
 La "Push protection" est également activée par défaut en même temps qu'Advanced Security.
 
-![L'écran de détection des secrets sur Azure DevOps.](/articles/2024/2-ghas/azure-secret-scanning.png)
+![L'écran de détection des secrets sur Azure DevOps.](/blog/2024/2-ghas/azure-secret-scanning.png)
 _Source image : <https://learn.microsoft.com/fr-fr/azure/devops/repos/security/media/secret-scanning-alerts.png?view=azure-devops>._
 
 Documentation sur l'analyse de secrets : <https://learn.microsoft.com/fr-fr/azure/devops/repos/security/github-advanced-security-secret-scanning?view=azure-devops>

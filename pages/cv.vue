@@ -5,14 +5,13 @@
         <div id="job-list">
           <div id="jobs-header">
             <h2>{{ $t('WORK.EXPERIENCE') }}</h2>
-            <v-btn
+            <UButton
               id="cv-download-button"
               :href="locale === 'fr' ? '/CV.pdf' : '/Resume.pdf'"
               color="primary"
               :download="`${$t('RESUME')} Arnaud Flaesch.pdf`"
-            >
-              {{ $t('DOWNLOAD.RESUME') }}
-            </v-btn>
+              :label="$t('DOWNLOAD.RESUME')"
+            />
           </div>
           <Experience :key="job.name" :experience="job" v-for="job in jobData.slice(0, jobIndexEnd)" />
 

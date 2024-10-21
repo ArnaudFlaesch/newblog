@@ -17,7 +17,7 @@ lorsqu'il s'agit par exemple d'un projet Node.JS qui va en contenir une liste as
 package.json. Au fil du temps les fonctionnalités ajoutées au projet vont nécessiter des dépendances
 supplémentaires et cela peut entraîner des problèmes, notamment liés à la sécurité, si elles ne sont pas maintenues régulièrement.
 
-![Liste de pull requests sur un projet Node.JS](/articles/2024/1-renovate/nodejs-pr-list.gif)
+![Liste de pull requests sur un projet Node.JS](/blog/blog/2024/1-renovate/nodejs-pr-list.gif)
 _Les mises à jour sont fréquentes, particulièrement sur les projets frontend NodeJS.
 Source photo : pull requests  [d'un de mes projets sur GitHub](https://github.com/ArnaudFlaesch/Dash-Web/pulls?q=is%3Apr+is%3Aclosed)._
 
@@ -37,7 +37,7 @@ rendre compte que cette librairie n'est pas compatible avec un composant déjà 
 Dans ce cas il pourra soit être bloqué dans son travail, soit être ralenti par une montée de version
 nécessaire mais non prévue initialement.
 
-![Personne en train de jouer à Jenga.](/articles/2024/1-renovate/jenga.jpg)
+![Personne en train de jouer à Jenga.](/blog/2024/1-renovate/jenga.jpg)
 _Développeur frontend essayant de mettre à jour un package.json non maintenu depuis 2 ans.
 Source photo : [Amazon](https://www.amazon.fr/D-Y-Republic-traditionnel-bois/dp/B093WZC8Q2?th=1)._
 
@@ -69,7 +69,7 @@ des modifications au code via une pull request tout en nécessitant toujours une
 (sauf si vous modifiez le fichier de configuration associé au projet pour que l'outil valide et
 intègre la pull request sans nécessiter votre approbation).
 
-![Pull request de Renovate sur Github.](/articles/2024/1-renovate/update-pr-angular.png)
+![Pull request de Renovate sur Github.](/blog/2024/1-renovate/update-pr-angular.png)
 _Une pull request proposée par Renovate pour mettre à jour Angular Material.
 Source photo : Un de mes [projets sur GitHub](https://github.com/ArnaudFlaesch/Dash-Web/pull/1038)._
 
@@ -160,7 +160,7 @@ le processus sera assez similaire et vous devrez créer un fichier .gitlab-ci.ym
 
 Une fois Renovate exécuté sur un projet, une onboarding pull request sera créée :
 
-![Exemple d'une PR de configuration initiale de Renovate.](/articles/2024/1-renovate/onboarding-pr.png)
+![Exemple d'une PR de configuration initiale de Renovate.](/blog/2024/1-renovate/onboarding-pr.png)
 _Exemple d'une PR de configuration initiale de Renovate.
 Source photo : PR sur [GitHub](https://github.com/ArnaudFlaesch/Dash-Web/pull/2)._
 

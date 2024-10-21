@@ -8,7 +8,7 @@
         <small>{{ formatPublicationDate(props.post.date) }}</small>
       </header>
       <div class="article-preview">
-        <NuxtImg :src="`/articles/${props.post.image}`" class="blog-thumbnail" alt="Illustration article" />
+        <NuxtImg :src="`/blog/${props.post.image}`" class="blog-thumbnail" alt="Illustration article" />
         <section>
           <p class="description" itemProp="description">{{ props.post.description }}</p>
         </section>
