@@ -5,6 +5,7 @@ const sw = process.env.SW === 'true';
 export default defineNuxtConfig({
   compatibilityDate: '2024-04-03',
   devtools: { enabled: false },
+  head:
   css: ['~/assets/styles.scss', '~/assets/global.scss'],
   build: {
     transpile: ['vuetify']
@@ -50,25 +51,31 @@ export default defineNuxtConfig({
   },
 
   pwa: {
-    strategies: sw ? 'injectManifest' : 'generateSW',
-    srcDir: sw ? 'service-worker' : undefined,
-    filename: sw ? 'sw.ts' : undefined,
-    registerType: 'autoUpdate',
+    // https://pwa.nuxtjs.org/manifest
+    // Manifest adds Web App Manifest with no pain.
     manifest: {
-      name: 'Arnaud Flaesch',
-      short_name: 'AF',
-      background_color: '#fafafa',
-      theme_color: '#1976d2',
-      start_url: '/',
-      display: 'minimal-ui',
-      icon: '/public/images/favicon.png'
+      name: "SportsWire",
+      short_name: "SportsWire",
+      description: "Up-to-date Sports News and Analysis App.",
+      theme_color: "#6a5acd",
+      lang: "en",
+      background_color: "#6a5acd",
     },
-    workbox: {
-      globPatterns: ['**/*.{js,css,html,png,svg,ico}']
+    // https://pwa.nuxtjs.org/icon
+    icon: {
+      sizes: [64, 120, 144, 152, 192, 384, 512], //Array of sizes to be generated (Square).These are the default values
     },
-    injectManifest: {
-      globPatterns: ['**/*.{js,css,html,png,svg,ico}']
-    }
+    // https://pwa.nuxtjs.org/meta
+    // Meta easily adds common meta tags into your project with zero-config needed.
+    meta: {
+      name: "SportsWire",
+      description: "Up-to-date Sports News and Analysis App.",
+      author: "Vino Samari",
+      theme_color: "#6a5acd",
+      nativeUi: true,
+      appleStatusBarStyle: "black",
+      mobileAppIOS: true,
+    },
   },
   vite: {
     vue: {
