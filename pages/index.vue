@@ -54,8 +54,12 @@ $detail-block-border-color: #1f5099;
 
 #home-page {
   #site-links {
+    ul {
+      list-style-type: disc;
+    }
     a {
       color: black;
+      text-decoration: underline;
     }
   }
 

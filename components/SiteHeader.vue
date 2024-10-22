@@ -1,11 +1,11 @@
 <template>
   <span id="portfolio-header">
     <h1>
-      <NuxtLink :to="localePath('/')">{{ 'Site title' }}</NuxtLink>
+      <NuxtLink :to="localePath('/')">{{ fullName }}</NuxtLink>
     </h1>
     <div id="right-navbar">
       <div id="url-list">
-        <NuxtLink :key="url.path" v-for="url in urls" :to="localePath(url.path)">
+        <NuxtLink :key="url.path" v-for="url in urls" exactActiveClass="active" :to="localePath(url.path)">
           <v-icon :aria-label="$t(url.label)" aria-hidden="false"> {{ url.icon }} </v-icon>{{ $t(url.label) }}
         </NuxtLink>
       </div>
@@ -24,6 +24,7 @@
 
 <script lang="ts" setup>
 import { mdiHome, mdiBriefcase, mdiBookVariant, mdiCodeBlockTags, mdiEmail } from '@mdi/js';
+import { fullName } from '~/data/SiteData';
 interface IUrl {
   icon: string;
   path: string;

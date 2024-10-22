@@ -11,3 +11,9 @@ const props = defineProps({
   tooltip: String
 });
 </script>
+
+<style lang="scss" scoped>
+.v-icon {
+  width: 40px;
+}
+</style>

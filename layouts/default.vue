@@ -60,19 +60,15 @@ $detail-block-border-color: #1f5099;
   #site-body {
     display: flex;
     flex: 0 1 calc(100% - 4.5rem);
-    padding: 2em 3em;
+    padding: 2em 6em;
     overflow-y: scroll;
-
-    #profile-container {
-      padding: 0 2em;
-    }
 
     #site-page {
       display: flex;
       flex-direction: column;
       flex: 0 0 80%;
       max-width: 80%;
-      padding: 0 14% 0 5%;
+      padding: 0 8%;
       justify-content: space-between;
 
       #site-content {

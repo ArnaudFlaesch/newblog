@@ -41,6 +41,7 @@ $detail-block-border-color: #1f5099;
 
   .detail-info {
     flex-basis: 75%;
+    margin: auto;
   }
 }
 

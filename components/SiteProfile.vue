@@ -1,17 +1,16 @@
 <template>
   <div id="profile">
-    <NuxtLink to="/">
+    <NuxtLink id="avatar-link" to="/">
       <UAvatar id="bio-avatar" size="3xl" src="/profile-picture.jpg" :alt="author" />
     </NuxtLink>
     <div id="bio">
       <div id="work">
-        <Work />
+        <v-icon>{{ mdiBriefcase }}</v-icon>
         {{ $t(jobName) }} <br />
-        {{ $t('AT') }}
-        {{ company }}
+        {{ $t('AT') }}{{ company }}
       </div>
       <div id="location">
-        <LocationOn />
+        <v-icon>{{ mdiMapMarker }}</v-icon>
         {{ city }}
       </div>
     </div>
@@ -83,11 +82,7 @@
         <a :href="stackOverflowLink" class="social-link">
           <TooltipIcon tooltip="Stack Overflow">
             <template v-slot:icon
-              ><NuxtImg
-                src="/icons/socials/stackoverflow-icon.png"
-                :width="IMAGE_HEIGHT"
-                :height="IMAGE_WIDTH"
-                alt="stackoverflow"
+              ><NuxtImg src="/icons/socials/stackoverflow-icon.png" :width="IMAGE_WIDTH" alt="stackoverflow"
             /></template>
           </TooltipIcon>
           <span>{{ $t('STACK.OVERFLOW.PROFILE') }}</span>
@@ -98,24 +93,21 @@
 </template>
 
 <script lang="ts" setup>
+import { mdiBriefcase, mdiMapMarker } from '@mdi/js';
+import {
+  fullName,
+  credlyLink,
+  scrumOrgLink,
+  mediumLink,
+  linkedinLink,
+  stackOverflowLink,
+  jobName,
+  githubLink,
+  company,
+  city
+} from '~/data/SiteData';
 const IMAGE_HEIGHT = 40;
 const IMAGE_WIDTH = 40;
-
-const fullName = 'Arnaud Flaesch';
-const city = 'Paris';
-const jobName = "Développeur d'applications";
-const company = 'Institut Pasteur';
-const title = `${fullName} - ${jobName}`;
-const siteName = 'arnaudflaesch.github.io';
-const siteUrl = `https://${siteName}`;
-const defaultImageUrl = '/profile-picture.jpg';
-
-const linkedinLink = 'https://www.linkedin.com/in/arnaudflaesch/';
-const githubLink = 'https://github.com/ArnaudFlaesch';
-const scrumOrgLink = 'https://www.scrum.org/user/1355891';
-const credlyLink = 'https://www.credly.com/users/arnaud-flaesch/badges';
-const mediumLink = 'https://medium.com/@arnaudflaesch';
-const stackOverflowLink = 'https://stackoverflow.com/users/12927815/arnaud-flaesch';
 
 const author = fullName;
 </script>
@@ -126,14 +118,18 @@ const author = fullName;
   flex-direction: column;
   gap: 1.5em;
 
+  #avatar-link {
+    justify-content: center;
+    display: flex;
+  }
+
   #bio-avatar {
     margin: 0 auto;
   }
 
   #bio {
-    svg {
-      margin-right: 0.5rem;
-      width: 25px;
+    .v-icon {
+      margin-right: 1rem;
     }
 
     > * {
@@ -152,7 +148,7 @@ const author = fullName;
   #social-links {
     display: flex;
     flex-direction: column;
-    gap: 1em 0.5em;
+    gap: 2em 0.5em;
     font-size: 0.9rem;
 
     a {

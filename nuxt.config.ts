@@ -1,21 +1,6 @@
 import vuetify, { transformAssetUrls } from 'vite-plugin-vuetify';
+import { siteUrl, title } from './data/SiteData';
 // https://nuxt.com/docs/api/configuration/nuxt-config
-
-const fullName = 'Arnaud Flaesch';
-const city = 'Paris';
-const jobName = "Développeur d'applications";
-const company = 'Institut Pasteur';
-const title = `${fullName} - ${jobName}`;
-const siteName = 'arnaudflaesch.github.io';
-const siteUrl = `https://${siteName}`;
-const defaultImageUrl = '/profile-picture.jpg';
-
-const linkedinLink = 'https://www.linkedin.com/in/arnaudflaesch/';
-const githubLink = 'https://github.com/ArnaudFlaesch';
-const scrumOrgLink = 'https://www.scrum.org/user/1355891';
-const credlyLink = 'https://www.credly.com/users/arnaud-flaesch/badges';
-const mediumLink = 'https://medium.com/@arnaudflaesch';
-const stackOverflowLink = 'https://stackoverflow.com/users/12927815/arnaud-flaesch';
 
 export default defineNuxtConfig({
   compatibilityDate: '2024-04-03',
@@ -30,7 +15,7 @@ export default defineNuxtConfig({
       title: title,
       meta: [{ charset: 'utf-8' }, { name: 'viewport', content: 'width=device-width, initial-scale=1' }],
       link: [
-        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+        { rel: 'icon', type: 'image/x-icon', href: '/favicon.png' },
         { rel: 'manifest', href: '/manifest.webmanifest' }
       ]
     }
@@ -43,6 +28,7 @@ export default defineNuxtConfig({
     '@nuxtjs/i18n',
     '@nuxt/ui',
     '@nuxt/content',
+    '@nuxtjs/sitemap',
     'nuxt-graphql-client',
     '@nuxtjs/seo',
     (_options, nuxt) => {

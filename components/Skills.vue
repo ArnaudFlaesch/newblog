@@ -2,7 +2,7 @@
   <div id="skills-list">
     <DetailBlock :key="index" v-for="(block, index) in skills">
       <template v-slot:titleComponent
-        ><h3 class="skill-category-title">{{ block.label }}</h3></template
+        ><h3 class="skill-category-title">{{ $t(block.label) }}</h3></template
       >
 
       <template v-slot:detailComponent>
@@ -78,11 +78,11 @@ const toolsSkills: ISkill[] = [
 const skills: { label: string; skills: ISkill[] }[] = [
   { label: 'Frontend', skills: frontendSkills },
   { label: 'Backend', skills: backendSkills },
-  { label: 'Tools', skills: toolsSkills }
+  { label: 'TOOLS', skills: toolsSkills }
 ];
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 #skills-list {
   display: flex;
   flex-direction: column;
@@ -95,7 +95,7 @@ const skills: { label: string; skills: ISkill[] }[] = [
   .detail-info {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.5em;
+    gap: 1em;
   }
 }
 </style>

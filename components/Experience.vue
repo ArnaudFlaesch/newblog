@@ -2,7 +2,16 @@
   <DetailBlock>
     <template v-slot:titleComponent>
       <div class="job-content">
-        <div class="job-period">{{ displayPeriod(props.experience.dateDebut, props.experience.dateFin) }}</div>
+        <div class="job-period">
+          <span v-if="props.experience.dateFin"
+            >{{ formatDate(props.experience.dateDebut) }} <v-icon> {{ mdiArrowRightThin }} </v-icon>
+            {{ formatDate(props.experience.dateFin) }}</span
+          >
+          <span v-else
+            >{{ formatDate(props.experience.dateDebut) }} <v-icon> {{ mdiArrowRightThin }}</v-icon>
+            {{ $t('TODAY') }}</span
+          >
+        </div>
         <div class="job-name">
           <a :href="props.experience.website" v-if="props.experience.website">
             <NuxtImg v-if="props.experience.logoPath" :src="props.experience.logoPath" :alt="props.experience.name" />
@@ -35,7 +44,9 @@ import { format, Locale } from 'date-fns';
 import { enUS } from 'date-fns/locale/en-US';
 import { fr } from 'date-fns/locale/fr';
 import type { IExperience } from '~/model/IExperience';
-import { h, computed } from 'vue';
+import { computed } from 'vue';
+import { mdiArrowRightThin } from '@mdi/js';
+
 const { locale } = useI18n();
 
 const props = defineProps({
@@ -54,12 +65,6 @@ const descriptionList = computed(
 
 function formatDate(date: Date): string {
   return format(date, 'LLLL yyyy', { locale: locale.value === 'fr' ? fr : enUS });
-}
-
-function displayPeriod(dateDebut: Date, dateFin?: Date) {
-  dateFin
-    ? h('', [formatDate(dateDebut), '<ArrowForward />', formatDate(dateFin)])
-    : h('', [formatDate(dateDebut), '<ArrowForward />', t('TODAY')]);
 }
 </script>
 
